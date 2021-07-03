@@ -1,0 +1,120 @@
+<! DOCTYPE html>  
+<html>  
+    <head>  
+    <meta charset="utf-8">  
+    <title>  
+         Calculator using HTML Example  
+    </title>  
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet"> 
+    
+    
+    <style>  
+    html {  
+  height: 100vh;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  background-color: #88cbdd;  
+  background-image: linear-gradient(315deg, #53b679 0%, #000000 74%);  
+  font-family:'Times New Roman', Times, serif;  
+}  
+.title {  
+margin-bottom: 10px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: red;  
+font-family: Chiller;
+  
+}  
+input[type=button] {  
+    
+  width: 60px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  margin: 5px;  
+  box-sizing: border-box;  
+  background: #ecedef;  
+  border: none;  
+  font-size: 30px;  
+  line-height: 30px;  
+  border-radius: 50%;  
+  font-weight: 700;  
+  color: #1a1212;  
+  cursor: pointer;    
+}  
+input[type=text] {  
+  color: red;
+  font-weight: bold;
+  }  
+.calculator {  
+  background-color: #c0c0c0;  
+  box-shadow: 0px 0px 0px 10px #666;  
+  border: 5px solid black;  
+  border-radius: 10px;  
+  width: 99%;
+}  
+#display {  
+  height: 40px;  
+  text-align: right;  
+  background-color: rgb(96, 90, 122);  
+  border: 3px solid white;  
+  font-size: 18px;  
+  left: 2px;  
+  top: 2px;  
+  
+}  #display:focus{
+  background-color: rgb(59, 64, 75);
+}
+
+button:hover{
+    background-color: black;
+}   
+    </style>  
+</head>  
+<body>  
+    <div class = "title"  align="center">  
+      Example of Calculator using HTML 
+    </div>  
+    <form name="Calculator" class = "calculator" >  
+  <fieldset>
+         
+<table border="2" align="center" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0">  
+  <legend>Made by Sujeet</legend>
+ <tr><td colspan="4"><input type="text" name="Input" Size="35" id="display"> </td></tr>
+<tr>  
+<td><input type="button" name = "one"  value=" 1 " OnClick="Input.value += '1'">  
+<td><input type="button" name = "two"   value=" 2 " OnCLick="Input.value += '2'">  </td>
+<td><input type="button" name = "three"  value=" 3 " OnClick="Input.value += '3'">  </td>
+<td><input type="button" name="add"     value=" + " OnClick="Input.value += ' + '">  </td></tr>
+<tr>
+<td><input type="button" name = "four"  value=" 4 " OnClick="Input.value += '4'">  </td>
+<td><input type="button" name = "five"  value=" 5 " OnCLick="Input.value += '5'"> </td> 
+<td><input type="button" name = "six"   value=" 6 " OnClick="Input.value += '6'">  </td>
+<td><input type="button" name = "minus"  value=" - " OnClick="Input.value += ' - '">  </td></tr>
+
+<tr>  
+<td><input type="button" name = "seven"  value=" 7 " OnClick="Input.value += '7'">  </td>
+<td><input type="button" name = "eight"  value=" 8 " OnCLick="Input.value += '8'"> </td> 
+<td><input type="button" name = "nine"   value=" 9 " OnClick="Input.value += '9'"> </td> 
+<td><input type="button" name = "mul"   value=" * " OnClick="Input.value += ' * '">  </td></tr>
+<tr>  
+<td><input type="button" name = "clear"  value=" c " OnClick="Input.value = ''">  </td>
+<td><input type="button" name="zero"   value=" 0 " OnClick="Input.value += '0'"> </td> 
+<td><input type="button" name="DoIt"  value=" = " OnClick="equal()">  </td>
+<td><input type="button" name="div"  value=" / " OnClick="Input.value += ' / '">  </td> </tr>  
+</table>  </fieldset> 
+</form>  
+
+<script>
+    function equal()
+    {
+      var str= document.getElementById('display').value
+       document.getElementById('display').value=eval(str);
+        
+    }
+</script>
+</body>  
+</html>    
