@@ -1,2 +1,2 @@
-from nginix:alpine
-copy calc.html src/calc.html
+FROM nginix:alpine
+COPY calc.html src/calc.html
